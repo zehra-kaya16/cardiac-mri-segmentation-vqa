@@ -98,16 +98,15 @@ VQA / Natural Language Query Module
 
 ## Dataset
 
-This project is based on the ACDC dataset:
+This project uses the ACDC MICCAI 2017 dataset, which contains short-axis cardiac MRI volumes with expert annotations.
 
-Dataset: ACDC - Automated Cardiac Diagnosis Challenge
-Source: MICCAI 2017
-Image type: Short-axis cardiac MRI volumes
-Segmentation classes:
-Background
-Right Ventricle (RV)
-Myocardium (MYO)
-Left Ventricle (LV)
+| Property | Description |
+|---|---|
+| Dataset | ACDC - Automated Cardiac Diagnosis Challenge |
+| Source | MICCAI 2017 |
+| Image Type | Short-axis cardiac MRI |
+| Classes | Background, RV, MYO, LV |
+| Phases | End-Diastole (ED), End-Systole (ES) |
 
 The dataset provides manually annotated cardiac MRI cases, including end-diastolic and end-systolic phases.
 
@@ -129,15 +128,17 @@ The final web interface focuses on patient-level visualization, clinical metric 
 
 ## Clinical Parameter Estimation
 
-Clinical functional parameters are computed from the predicted LV segmentation masks:
+Clinical functional parameters are calculated from the predicted LV segmentation masks.
 
-Parameter	Description
-EDV	End-Diastolic Volume
-ESV	End-Systolic Volume
-EF	Ejection Fraction
+| Parameter | Description |
+|---|---|
+| EDV | End-Diastolic Volume |
+| ESV | End-Systolic Volume |
+| EF | Ejection Fraction |
 
 The ejection fraction is calculated as:
 
+```text
 EF (%) = ((EDV - ESV) / EDV) × 100
 
 
@@ -176,23 +177,14 @@ Which cardiac structures were segmented?
 This design makes the system more interpretable and traceable, since the answers are based on measurable segmentation and clinical outputs.
 
 
+```markdown
 ## Tech Stack
-Backend
-Python
-FastAPI
-PyTorch
-NumPy
-SimpleITK
-NiBabel
-Frontend
-React
-Vite
-Axios
-Material UI
-Tools
-Git & GitHub
-VS Code
-Jupyter Notebook
+
+| Layer | Technologies |
+|---|---|
+| Backend | Python, FastAPI, PyTorch, NumPy, SimpleITK, NiBabel |
+| Frontend | React, Vite, Axios, Material UI |
+| Tools | Git, GitHub, VS Code, Jupyter Notebook |
 
 
 
@@ -231,29 +223,37 @@ cardiac-mri-segmentation-vqa/
 ```bash
 git clone https://github.com/zehra-kaya16/cardiac-mri-segmentation-vqa.git
 cd cardiac-mri-segmentation-vqa
+```
 
+### 2. Backend setup
 
-2. Backend setup
+```bash
 cd backend
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn main:app --reload
+```
 
 The backend runs at:
 
+```text
 http://127.0.0.1:8000
+```
 
+### 3. Frontend setup
 
-
-3. Frontend setup
+```bash
 cd frontend
 npm install
 npm run dev
+```
 
 The frontend runs at:
 
+```text
 http://localhost:5173
+```
 
 
 
