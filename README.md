@@ -155,7 +155,7 @@ The 2D ResU-Net model showed stable convergence, with training and validation lo
 
 | Loss Curve | Per-Class Dice Curve |
 |---|---|
-| ![2D ResU-Net loss curve]<img width="717" height="510" alt="image" src="https://github.com/user-attachments/assets/f51a95b2-7951-455c-94a7-22da9f40f3b0" /> | ![2D ResU-Net per-class Dice curve]<img width="766" height="548" alt="image" src="https://github.com/user-attachments/assets/91c64d68-ca56-4d88-96c2-77ab624b8eb6" /> |
+| <img width="717" height="510" alt="image" src="https://github.com/user-attachments/assets/f51a95b2-7951-455c-94a7-22da9f40f3b0" /> | <img width="766" height="548" alt="image" src="https://github.com/user-attachments/assets/91c64d68-ca56-4d88-96c2-77ab624b8eb6" /> |
 
 
 ## Clinical Parameter Estimation
