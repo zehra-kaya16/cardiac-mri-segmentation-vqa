@@ -6,6 +6,17 @@ The system segments key anatomical structures from short-axis cardiac MR images,
 
 > This repository is a personal fork of the original graduation project repository, prepared for individual contribution tracking and portfolio presentation.
 
+
+## My Contributions
+
+This repository is a portfolio-oriented version of my graduation project. My main contributions include:
+
+- Development and evaluation of 2D and 3D cardiac MRI segmentation models
+- Clinical parameter estimation from LV segmentation masks
+- Integration of patient-level structured outputs with a natural language query module
+- Frontend interface design and backend API integration
+- Preparation of visual outputs and documentation for academic presentation
+
 ---
 
 ## Demo Preview
@@ -65,7 +76,7 @@ The system consists of a FastAPI-based backend for inference and result processi
 
 ---
 
-## 🏗 System Architecture
+## System Architecture
 
 ```text
 Frontend (React + Vite)
@@ -85,7 +96,7 @@ Segmentation Overlays + EDV/ESV/EF Results
 VQA / Natural Language Query Module
 
 
-Dataset
+## Dataset
 
 This project is based on the ACDC dataset:
 
@@ -101,21 +112,22 @@ Left Ventricle (LV)
 The dataset provides manually annotated cardiac MRI cases, including end-diastolic and end-systolic phases.
 
 
-Deep Learning Models
+## Deep Learning Models
 
-Several segmentation architectures were evaluated during the project:
+The following architectures were evaluated during the research phase:
 
-Model	Description
-2D U-Net	Baseline encoder-decoder segmentation architecture
-2D ResU-Net	Residual U-Net architecture for improved feature learning
-Attention ResU-Net	Residual U-Net with attention mechanisms
-3D U-Net	Volumetric segmentation model using 3D spatial context
-3D ResU-Net	Residual 3D U-Net architecture
+| Model | Purpose |
+|---|---|
+| 2D U-Net | Baseline encoder-decoder segmentation model |
+| 2D ResU-Net | Residual U-Net architecture for improved feature learning |
+| Attention ResU-Net | Residual U-Net with attention mechanisms |
+| 3D U-Net | Volumetric segmentation using 3D spatial context |
+| 3D ResU-Net | Residual 3D U-Net architecture |
 
-The final web application focuses on presenting patient-level segmentation outputs and clinical parameter estimation results.
+The final web interface focuses on patient-level visualization, clinical metric presentation, and natural language querying.
 
 
-Clinical Parameter Estimation
+## Clinical Parameter Estimation
 
 Clinical functional parameters are computed from the predicted LV segmentation masks:
 
@@ -130,7 +142,7 @@ EF (%) = ((EDV - ESV) / EDV) × 100
 
 
 
-Results Summary
+## Results Summary
 
 The experimental evaluation showed that 2D-based models provided more stable segmentation performance on the ACDC dataset. Among the evaluated models, 2D ResU-Net achieved the best overall performance.
 
@@ -143,7 +155,7 @@ Note: These results are based on the final evaluation setup used in the graduati
 
 
 
-VQA-Based Natural Language Querying
+## VQA-Based Natural Language Querying
 
 The VQA module allows users to query patient-level results using natural language.
 
@@ -164,7 +176,7 @@ Which cardiac structures were segmented?
 This design makes the system more interpretable and traceable, since the answers are based on measurable segmentation and clinical outputs.
 
 
-Tech Stack
+## Tech Stack
 Backend
 Python
 FastAPI
@@ -184,7 +196,7 @@ Jupyter Notebook
 
 
 
-Repository Structure
+## Repository Structure
 cardiac-mri-segmentation-vqa/
 │
 ├── backend/
@@ -212,39 +224,40 @@ cardiac-mri-segmentation-vqa/
 
 
 
-Installation
+## Installation
 
-Clone the repository:
+### 1. Clone the repository
 
+```bash
 git clone https://github.com/zehra-kaya16/cardiac-mri-segmentation-vqa.git
 cd cardiac-mri-segmentation-vqa
 
 
-Backend Setup
+2. Backend setup
 cd backend
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn main:app --reload
 
-The backend will run locally at:
+The backend runs at:
 
 http://127.0.0.1:8000
 
 
 
-Frontend Setup
+3. Frontend setup
 cd frontend
 npm install
 npm run dev
 
-The frontend will run locally at:
+The frontend runs at:
 
 http://localhost:5173
 
 
 
-Notes
+## Notes
 
 Large generated files, trained model checkpoints, and dataset files are not included in this repository.
 
@@ -257,16 +270,20 @@ Example visual outputs
 Project documentation
 
 
-Academic Context
+## Academic Context
 
 This project was developed as a Computer Engineering graduation project. It combines medical image segmentation, clinical parameter estimation, and natural language querying for cardiac MRI analysis.
 
+## Medical Disclaimer
 
-License
+This project is intended for academic and research purposes only. The outputs are generated from automatic segmentation results and are not intended for direct clinical decision-making.
+
+
+## License
 
 This project is provided for academic and educational purposes.
 
-Acknowledgements
+## Acknowledgements
 ACDC MICCAI 2017 Challenge organizers
 PyTorch community
 FastAPI community
