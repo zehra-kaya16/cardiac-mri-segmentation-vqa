@@ -149,6 +149,16 @@ The segmentation models were evaluated on the test set using Dice score, IoU, HD
 
 The 2D ResU-Net and 2D Attention ResU-Net models achieved the strongest overall segmentation performance. The LV class obtained the highest anatomical Dice scores, while MYO and RV were more challenging due to thinner structures and higher anatomical variability.
 
+### 2D ResU-Net Training Curves
+
+The 2D ResU-Net model showed stable convergence, with training and validation loss decreasing consistently throughout the training process. Per-class Dice curves indicate strong LV segmentation performance, while RV and MYO remained more challenging due to anatomical variability and smaller structure size.
+
+| Loss Curve | Per-Class Dice Curve |
+|---|---|
+| ![2D ResU-Net loss curve]<img width="717" height="510" alt="image" src="https://github.com/user-attachments/assets/f51a95b2-7951-455c-94a7-22da9f40f3b0" /> | ![2D ResU-Net per-class Dice curve] |
+
+
+
 
 ## Clinical Parameter Estimation
 
