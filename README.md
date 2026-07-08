@@ -98,8 +98,6 @@ VQA / Natural Language Query Module
 
 ## Dataset
 
-## Dataset
-
 This project is based on the ACDC dataset:
 
 Dataset: ACDC - Automated Cardiac Diagnosis Challenge
