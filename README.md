@@ -1,4 +1,15 @@
 # Cardiac MRI Segmentation, Clinical Parameter Estimation, and Structured VQA
+<p>
+  <img alt="Python" src="https://img.shields.io/badge/Python-Backend%20%26%20Modeling-3776AB?logo=python&logoColor=white" />
+  <img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-Deep%20Learning-EE4C2C?logo=pytorch&logoColor=white" />
+  <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-Backend%20API-009688?logo=fastapi&logoColor=white" />
+  <img alt="React" src="https://img.shields.io/badge/React-Frontend-61DAFB?logo=react&logoColor=black" />
+  <img alt="Vite" src="https://img.shields.io/badge/Vite-Build%20Tool-646CFF?logo=vite&logoColor=white" />
+  <img alt="Material UI" src="https://img.shields.io/badge/Material%20UI-User%20Interface-007FFF?logo=mui&logoColor=white" />
+  <img alt="Jupyter Notebook" src="https://img.shields.io/badge/Jupyter-Model%20Experiments-F37626?logo=jupyter&logoColor=white" />
+  <img alt="Medical Image Segmentation" src="https://img.shields.io/badge/Medical%20Image-Segmentation-2E7D32" />
+  <img alt="VQA" src="https://img.shields.io/badge/VQA-Natural%20Language%20Querying-6A1B9A" />
+</p>
 
 > This repository documents a portfolio-oriented version of a collaborative two-person Computer Engineering graduation project. The original project was completed with equal contribution. This version focuses on system architecture, implementation details, experimental results, and my individual contribution areas.
 
