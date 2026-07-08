@@ -39,23 +39,6 @@ The system consists of a FastAPI-based backend for inference and result processi
 
 ---
 
-## 📌 Proje Özeti
-
-Bu proje, kalp MR görüntülerinin derin öğrenme tabanlı otomatik bölütlenmesi ve fonksiyonel kardiyak parametrelerin hesaplanması için uçtan uca bir sistem sunmaktadır.
-
-Sistem şu işlemleri gerçekleştirmektedir:
-
-- Sol ventrikül (LV), sağ ventrikül (RV) ve miyokard (MYO) bölütlemesi
-- Kardiyak fonksiyonel parametrelerin hesaplanması:
-  - Diyastol Sonu Hacim (EDV)
-  - Sistol Sonu Hacim (ESV)
-  - Ejeksiyon Fraksiyonu (EF)
-- Web arayüzü üzerinden segmentasyon çıktılarının görselleştirilmesi
-
-Backend FastAPI ile, frontend ise React (Vite) kullanılarak geliştirilmiştir.
-
----
-
 ## Example Segmentation Output
 
 <p align="center">
