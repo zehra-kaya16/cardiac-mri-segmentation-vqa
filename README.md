@@ -77,6 +77,9 @@ The system consists of a FastAPI-based backend for inference and result processi
 
 ## System Architecture
 
+```md
+## System Architecture
+
 ```mermaid
 flowchart TD
     A["Frontend<br/>React + Vite"] -->|HTTP API Requests| B["Backend<br/>FastAPI"]
