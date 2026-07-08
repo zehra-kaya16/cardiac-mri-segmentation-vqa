@@ -23,7 +23,7 @@ This repository is a portfolio-oriented version of my graduation project. My mai
 <img width="3006" height="2012" alt="image1" src="https://github.com/user-attachments/assets/e1741103-ff3b-4275-84b4-0ab7e59f9486" alt="Cardiac MRI Segmentation Web Interface"/>
 <img width="2787" height="2012" alt="image2" src="https://github.com/user-attachments/assets/bc94922d-db9e-4a7b-8e72-1a1d04eccb31"/>
 <p align="center">
-  <em>Web-based cardiac MRI analysis interface for selecting patient cases and segmentation models, estimating clinical parameters, generating VQA-based clinical interpretations, and visualizing ED/ES segmentation overlays.</em>
+  <em>Figure 1. Web-based cardiac MRI analysis interface for selecting patient cases and segmentation models, estimating clinical parameters, generating VQA-based clinical interpretations, and visualizing ED/ES segmentation overlays.</em>
 </p>
 
 ---
@@ -57,7 +57,7 @@ The system consists of a FastAPI-based backend for inference and result processi
 </p>
 
 <p align="center">
-  <em>Web-based cardiac MRI analysis interface for selecting patient cases and segmentation models, estimating clinical parameters, generating VQA-based clinical interpretations, and visualizing ED/ES segmentation overlays.</em>
+  <em>Figure 2. Representative cardiac MRI segmentation output comparing the original MR slice, ground-truth mask, model prediction, and overlay visualizations for RV, MYO, and LV structures.</em>
 </p>
 
 
