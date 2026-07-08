@@ -128,7 +128,7 @@ The final web interface focuses on patient-level visualization, clinical metric 
 
 ## Clinical Parameter Estimation
 
-Clinical functional parameters are calculated from the predicted LV segmentation masks.
+Clinical functional parameters are calculated from the predicted Left Ventricle (LV) segmentation masks.
 
 | Parameter | Description |
 |---|---|
@@ -140,44 +140,43 @@ The ejection fraction is calculated as:
 
 ```text
 EF (%) = ((EDV - ESV) / EDV) × 100
-
-
+```
 
 ## Results Summary
 
-The experimental evaluation showed that 2D-based models provided more stable segmentation performance on the ACDC dataset. Among the evaluated models, 2D ResU-Net achieved the best overall performance.
+The experimental evaluation showed that 2D-based models provided more stable segmentation performance on the ACDC dataset. Among the evaluated architectures, the 2D ResU-Net model achieved the most reliable overall performance for cardiac structure segmentation.
 
-Clinical Metric	Error
-EDV MAE	6.58 mL
-ESV MAE	6.27 mL
-EF MAE	3.11 percentage points
+### Clinical Metric Error
 
-Note: These results are based on the final evaluation setup used in the graduation project.
+| Metric | Mean Absolute Error |
+|---|---:|
+| EDV | 6.58 mL |
+| ESV | 6.27 mL |
+| EF | 3.11 percentage points |
 
-
+> These results are based on the final evaluation setup used in the graduation project.
 
 ## VQA-Based Natural Language Querying
 
-The VQA module allows users to query patient-level results using natural language.
+The VQA module allows users to query patient-level cardiac MRI analysis results using natural language.
 
 Instead of directly interpreting raw MRI images, the module uses structured outputs obtained from:
 
-Segmentation masks
-Clinical parameter calculations
-Patient-level EDV, ESV, and EF values
-Rule-based clinical interpretation outputs
+- Segmentation masks
+- Clinical parameter calculations
+- Patient-level EDV, ESV, and EF values
+- Rule-based clinical interpretation outputs
 
 Example queries:
 
-What is the ejection fraction of this patient?
-Is the EF value within the normal range?
-What are the EDV and ESV values?
-Which cardiac structures were segmented?
+- What is the ejection fraction of this patient?
+- Is the EF value within the normal range?
+- What are the EDV and ESV values?
+- Which cardiac structures were segmented?
+- Can these results be clinically interpreted?
 
-This design makes the system more interpretable and traceable, since the answers are based on measurable segmentation and clinical outputs.
+This design makes the system more interpretable and traceable because the answers are based on measurable segmentation and clinical metric outputs rather than unrestricted image interpretation.
 
-
-```markdown
 ## Tech Stack
 
 | Layer | Technologies |
@@ -186,16 +185,16 @@ This design makes the system more interpretable and traceable, since the answers
 | Frontend | React, Vite, Axios, Material UI |
 | Tools | Git, GitHub, VS Code, Jupyter Notebook |
 
-
-
 ## Repository Structure
+
+```text
 cardiac-mri-segmentation-vqa/
-│
 ├── backend/
 │   ├── app/
 │   ├── models/
 │   ├── services/
-│   └── main.py
+│   ├── main.py
+│   └── requirements.txt
 │
 ├── frontend/
 │   ├── src/
@@ -205,16 +204,11 @@ cardiac-mri-segmentation-vqa/
 ├── notebooks/
 │   └── model_training_and_evaluation.ipynb
 │
-├── assets/
-│   ├── interface-home.png
-│   ├── segmentation-overlay-example.png
-│   └── clinical-results-example.png
-│
 ├── README.md
-├── .gitignore
-└── requirements.txt
+└── .gitignore
+```
 
-
+> Large generated files, trained model checkpoints, and dataset files are not included in this repository.
 
 ## Installation
 
@@ -255,20 +249,17 @@ The frontend runs at:
 http://localhost:5173
 ```
 
-
-
 ## Notes
 
 Large generated files, trained model checkpoints, and dataset files are not included in this repository.
 
-The repository focuses on:
+This repository focuses on:
 
-Source code
-Web application structure
-Model integration logic
-Example visual outputs
-Project documentation
-
+- Source code
+- Web application structure
+- Model integration logic
+- Example visual outputs
+- Project documentation
 
 ## Academic Context
 
@@ -278,13 +269,13 @@ This project was developed as a Computer Engineering graduation project. It comb
 
 This project is intended for academic and research purposes only. The outputs are generated from automatic segmentation results and are not intended for direct clinical decision-making.
 
-
 ## License
 
 This project is provided for academic and educational purposes.
 
 ## Acknowledgements
-ACDC MICCAI 2017 Challenge organizers
-PyTorch community
-FastAPI community
-React and Vite communities
+
+- ACDC MICCAI 2017 Challenge organizers
+- PyTorch community
+- FastAPI community
+- React and Vite communities
