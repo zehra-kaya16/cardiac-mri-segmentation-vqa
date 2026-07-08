@@ -79,14 +79,19 @@ The system consists of a FastAPI-based backend for inference and result processi
 
 ```mermaid
 flowchart TD
-    A[Frontend<br/>React + Vite] -->|HTTP API Requests| B[Backend<br/>FastAPI]
-    B --> C[Model Inference Layer]
-    C --> D[Deep Learning Segmentation Models<br/>2D U-Net / 2D ResU-Net / Attention ResU-Net / 3D U-Net / 3D ResU-Net]
-    D --> E[Segmentation Outputs<br/>LV / RV / MYO Masks]
-    E --> F[Clinical Parameter Estimation<br/>EDV / ESV / EF]
-    E --> G[Segmentation Overlay Visualization]
-    F --> H[VQA / Natural Language Query Module]
-    G --> I[Web Interface Results]
+    A["Frontend<br/>React + Vite"] -->|HTTP API Requests| B["Backend<br/>FastAPI"]
+
+    B --> C["Model Inference Layer"]
+    C --> D["Deep Learning Segmentation Models<br/>2D U-Net / 2D ResU-Net / Attention ResU-Net / 3D U-Net / 3D ResU-Net"]
+
+    D --> E["Segmentation Outputs<br/>LV / RV / MYO Masks"]
+
+    E --> F["Clinical Parameter Estimation<br/>EDV / ESV / EF"]
+    E --> G["Segmentation Overlay Visualization"]
+
+    F --> H["VQA / Natural Language Query Module"]
+
+    G --> I["Web Interface Results"]
     H --> I
 
 The system consists of a React + Vite frontend for user interaction, a FastAPI backend for inference and result processing, deep learning segmentation models for cardiac MRI analysis, a clinical parameter estimation module for EDV/ESV/EF computation, and a VQA module for natural language querying over structured patient-level outputs.
