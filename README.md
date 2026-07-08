@@ -1,9 +1,19 @@
 # Cardiac MRI Segmentation and Clinical Parameter Estimation with VQA
 
-Web-based application for cardiac MRI segmentation and functional parameter estimation (EDV, ESV, EF) using deep learning models, FastAPI backend, and React (Vite) frontend.  
-Based on the **ACDC (MICCAI 2017) dataset**.
+Web-based application for automatic cardiac MRI segmentation, clinical functional parameter estimation, and VQA-based natural language querying using deep learning models.
 
-> This repository is a personal fork of the original project for individual contributions and portfolio purposes.
+The system segments key anatomical structures from short-axis cardiac MR images, estimates EDV, ESV, and EF values, and presents the results through an interactive React-based web interface.
+
+> This repository is a personal fork of the original graduation project repository, prepared for individual contribution tracking and portfolio presentation.
+
+---
+
+## Demo Preview
+<img width="3006" height="2012" alt="image1" src="https://github.com/user-attachments/assets/e1741103-ff3b-4275-84b4-0ab7e59f9486" alt="Cardiac MRI Segmentation Web Interface"/>
+<img width="2787" height="2012" alt="image2" src="https://github.com/user-attachments/assets/bc94922d-db9e-4a7b-8e72-1a1d04eccb31"/>
+<p align="center">
+  <em>Web interface for selecting patient cases and visualizing segmentation outputs with clinical parameters.</em>
+</p>
 
 ---
 
