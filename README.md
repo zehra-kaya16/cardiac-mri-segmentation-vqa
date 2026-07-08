@@ -90,6 +90,7 @@ flowchart TD
     G --> I[Web Interface Results]
     H --> I
 ```
+The system consists of a React + Vite frontend for user interaction, a FastAPI backend for inference and result processing, deep learning segmentation models for cardiac MRI analysis, a clinical parameter estimation module for EDV/ESV/EF computation, and a VQA module for natural language querying over structured patient-level outputs.
 
 ## Dataset
 
