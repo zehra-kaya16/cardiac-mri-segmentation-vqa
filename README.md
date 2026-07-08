@@ -125,6 +125,31 @@ The following architectures were evaluated during the research phase:
 The final web interface focuses on patient-level visualization, clinical metric presentation, and natural language querying.
 
 
+## Experimental Results
+
+The segmentation models were evaluated on the test set using Dice score, IoU, HD95, and test loss. Among the evaluated architectures, the 2D ResU-Net and 2D Attention ResU-Net achieved the highest overall Dice scores, while the 3D U-Net produced competitive boundary-based HD95 results.
+
+### Overall Test Performance
+
+| Model | Test Loss | Mean Dice |
+|---|---:|---:|
+| 2D U-Net | 0.111 | 0.917 |
+| 2D ResU-Net | 0.102 | 0.924 |
+| 2D Attention ResU-Net | 0.099 | 0.924 |
+| 3D U-Net | 0.206 | 0.845 |
+
+### Per-Class Dice Scores
+
+| Model | BG | RV | MYO | LV |
+|---|---:|---:|---:|---:|
+| 2D U-Net | 0.998 | 0.908 | 0.885 | 0.957 |
+| 2D ResU-Net | 0.998 | 0.920 | 0.890 | 0.959 |
+| 2D Attention ResU-Net | 0.998 | 0.926 | 0.888 | 0.958 |
+| 3D U-Net | 0.998 | 0.825 | 0.796 | 0.913 |
+
+The 2D ResU-Net and 2D Attention ResU-Net models achieved the strongest overall segmentation performance. The LV class obtained the highest anatomical Dice scores, while MYO and RV were more challenging due to thinner structures and higher anatomical variability.
+
+
 ## Clinical Parameter Estimation
 
 Clinical functional parameters are calculated from the predicted Left Ventricle (LV) segmentation masks.
@@ -175,6 +200,15 @@ Example queries:
 - Can these results be clinically interpreted?
 
 This design makes the system more interpretable and traceable because the answers are based on measurable segmentation and clinical metric outputs rather than unrestricted image interpretation.
+
+## Example VQA Queries
+
+| Query Type | User Query | System Response |
+|---|---|---|
+| Numerical parameter query | What are the EDV, ESV, and EF values of patient001? | EDV: 297.9 mL, ESV: 240.1 mL, EF: 19.4%. |
+| Patient summary query | Can you briefly summarize the results for patient001? | For patient001, EDV was calculated as 297.9 mL, ESV as 240.1 mL, and EF as 19.4%. |
+| Clinical boundary query | Is the left ventricle dilated? | A definitive classification requires indexed LV volume, BSA, and sex-specific reference ranges. |
+| Out-of-scope clinical query | What treatment should be applied to this patient? | Treatment decisions must be made by a qualified medical professional. |
 
 ## Tech Stack
 
