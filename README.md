@@ -4,7 +4,7 @@ Web-based application for automatic cardiac MRI segmentation, clinical functiona
 
 The system segments key anatomical structures from short-axis cardiac MR images, estimates EDV, ESV, and EF values, and presents the results through an interactive React-based web interface.
 
-> This repository is a personal fork of the original graduation project repository, prepared for individual contribution tracking and portfolio presentation.
+> This repository presents a portfolio-oriented version of a collaborative two-person graduation project. The project was completed with equal contribution, and this version is maintained to document the system architecture, implementation details, experimental results, and my contribution areas.
 
 
 ## My Contributions
