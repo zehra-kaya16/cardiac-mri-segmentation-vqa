@@ -1,4 +1,4 @@
-# 🫀 ACDC Cardiac MRI Segmentation Web Application
+# Cardiac MRI Segmentation and Clinical Parameter Estimation with VQA
 
 Web-based application for cardiac MRI segmentation and functional parameter estimation (EDV, ESV, EF) using deep learning models, FastAPI backend, and React (Vite) frontend.  
 Based on the **ACDC (MICCAI 2017) dataset**.
