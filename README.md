@@ -77,9 +77,6 @@ The system consists of a FastAPI-based backend for inference and result processi
 
 ## System Architecture
 
-```md
-## System Architecture
-
 ```mermaid
 flowchart TD
     A["Frontend<br/>React + Vite"] -->|HTTP API Requests| B["Backend<br/>FastAPI"]
@@ -97,7 +94,8 @@ flowchart TD
     G --> I["Web Interface Results"]
     H --> I
 ```
-The system consists of a React + Vite frontend for user interaction, a FastAPI backend for inference and result processing, deep learning segmentation models for cardiac MRI analysis, a clinical parameter estimation module for EDV/ESV/EF computation, and a VQA module for natural language querying over structured patient-level outputs.
+
+The system consists of a React + Vite frontend for user interaction, a FastAPI backend for inference and result processing, deep learning segmentation models for cardiac MRI analysis, a clinical parameter estimation module for EDV, ESV, and EF computation, and a VQA module for natural language querying over structured patient-level outputs.
 
 ## Dataset
 
