@@ -78,22 +78,17 @@ The system consists of a FastAPI-based backend for inference and result processi
 
 ## System Architecture
 
-```text
-Frontend (React + Vite)
-        |
-        | HTTP API Requests
-        v
-Backend (FastAPI)
-        |
-        | Model Inference
-        v
-Deep Learning Segmentation Model
-        |
-        v
-Segmentation Overlays + EDV/ESV/EF Results
-        |
-        v
-VQA / Natural Language Query Module
+```mermaid
+flowchart TD
+    A[Frontend<br/>React + Vite] -->|HTTP API Requests| B[Backend<br/>FastAPI]
+    B --> C[Model Inference Layer]
+    C --> D[Deep Learning Segmentation Models<br/>2D U-Net / 2D ResU-Net / Attention ResU-Net / 3D U-Net / 3D ResU-Net]
+    D --> E[Segmentation Outputs<br/>LV / RV / MYO Masks]
+    E --> F[Clinical Parameter Estimation<br/>EDV / ESV / EF]
+    E --> G[Segmentation Overlay Visualization]
+    F --> H[VQA / Natural Language Query Module]
+    G --> I[Web Interface Results]
+    H --> I
 ```
 
 ## Dataset
