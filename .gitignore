@@ -30,3 +30,12 @@ venv/
 # Sistem dosyaları
 .DS_Store
 Thumbs.db
+
+
+.idea/
+.vscode/
+*.pyc
+.env
+node_modules/
+dist/
+build/
