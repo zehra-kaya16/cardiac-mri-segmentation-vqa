@@ -57,7 +57,7 @@ The system consists of a FastAPI-based backend for inference and result processi
 </p>
 
 <p align="center">
-  <em>Example cardiac MRI segmentation result showing MRI image, ground truth overlay, and predicted overlay.</em>
+  <em>Web-based cardiac MRI analysis interface for selecting patient cases and segmentation models, estimating clinical parameters, generating VQA-based clinical interpretations, and visualizing ED/ES segmentation overlays.</em>
 </p>
 
 
