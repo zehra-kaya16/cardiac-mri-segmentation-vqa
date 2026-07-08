@@ -1,21 +1,20 @@
-# Cardiac MRI Segmentation and Clinical Parameter Estimation with VQA
+# Cardiac MRI Segmentation, Clinical Parameter Estimation, and Structured VQA
 
-Web-based application for automatic cardiac MRI segmentation, clinical functional parameter estimation, and VQA-based natural language querying using deep learning models.
+> This repository documents a portfolio-oriented version of a collaborative two-person Computer Engineering graduation project. The original project was completed with equal contribution. This version focuses on system architecture, implementation details, experimental results, and my individual contribution areas.
+
+This project presents a web-based application for automatic cardiac MRI segmentation, clinical functional parameter estimation, and structured natural-language querying based on deep learning outputs.
 
 The system segments key anatomical structures from short-axis cardiac MR images, estimates EDV, ESV, and EF values, and presents the results through an interactive React-based web interface.
 
-> This repository presents a portfolio-oriented version of a collaborative two-person graduation project. The project was completed with equal contribution, and this version is maintained to document the system architecture, implementation details, experimental results, and my contribution areas.
-
-
 ## My Contributions
 
-This repository is a portfolio-oriented version of my graduation project. My main contributions include:
+Key areas I worked on include:
 
 - Development and evaluation of 2D and 3D cardiac MRI segmentation models
 - Clinical parameter estimation from LV segmentation masks
 - Integration of patient-level structured outputs with a natural language query module
 - Frontend interface design and backend API integration
-- Preparation of visual outputs and documentation for academic presentation
+- Preparation of visual outputs and project documentation for academic presentation
 
 ---
 
@@ -89,7 +88,7 @@ flowchart TD
     F --> H[VQA / Natural Language Query Module]
     G --> I[Web Interface Results]
     H --> I
-```
+
 The system consists of a React + Vite frontend for user interaction, a FastAPI backend for inference and result processing, deep learning segmentation models for cardiac MRI analysis, a clinical parameter estimation module for EDV/ESV/EF computation, and a VQA module for natural language querying over structured patient-level outputs.
 
 ## Dataset
@@ -103,8 +102,6 @@ This project uses the ACDC MICCAI 2017 dataset, which contains short-axis cardia
 | Image Type | Short-axis cardiac MRI |
 | Classes | Background, RV, MYO, LV |
 | Phases | End-Diastole (ED), End-Systole (ES) |
-
-The dataset provides manually annotated cardiac MRI cases, including end-diastolic and end-systolic phases.
 
 
 ## Deep Learning Models
@@ -264,6 +261,13 @@ This project was developed as a Computer Engineering graduation project. It comb
 ## Medical Disclaimer
 
 This project is intended for academic and research purposes only. The outputs are generated from automatic segmentation results and are not intended for direct clinical decision-making.
+
+## Limitations
+
+- The system was developed for academic and research purposes.
+- Trained model checkpoints and the full ACDC dataset are not included due to size and access limitations.
+- The VQA module answers questions based on structured segmentation and clinical metric outputs, not direct free-form image diagnosis.
+- Clinical outputs should not be used for medical decision-making.
 
 ## License
 
