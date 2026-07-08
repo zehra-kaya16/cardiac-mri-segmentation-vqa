@@ -94,7 +94,7 @@ Segmentation Overlays + EDV/ESV/EF Results
         |
         v
 VQA / Natural Language Query Module
-
+'''
 
 ## Dataset
 
